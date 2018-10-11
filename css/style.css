@@ -20,7 +20,7 @@ a:hover {
 
 .wrapper {
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	position: relative;
 	background-image: url(../images/bg.jpg);
 	background-repeat: no-repeat;
@@ -31,16 +31,17 @@ a:hover {
 
 /* ====== header ====== */
 .header {
-	position: relative;
 	background-color: rgba(0, 0, 0, 0.1);
 	padding: 17.5px 0;
+	top: 0;
+	left: 0;
+	width: 100%;
 	transition: all 0.6s ease-out;
 }
 
 .nav-fixed {
 	position: fixed !important;
-	width: 100%;
-	z-index: 1000;
+	z-index: 1010;
 }
 
 nav.header-black {
@@ -58,11 +59,14 @@ nav.header-black {
 .header-logo {
 	display: inline-block;
 	margin-right: 1rem;
-	padding-top: 0.3rem;
-	padding-bottom: 0.3rem;
 	font-size: 1.3rem;
 	font-weight: 500;
 	color: #6ed18f !important;
+}
+
+.header-logo img {
+	width: 80px;
+	height: 45px;
 }
 
 .menu-toggle {
@@ -73,6 +77,7 @@ nav.header-black {
 }
 
 .menu {
+	display: flex;
 	margin-left: auto;
 }
 
@@ -131,7 +136,7 @@ nav.header-black {
 .header-icon i {
 	font-size: 1.3rem;
 	color: #fff;
-	line-height: 25px;
+	line-height: 46px;
 }
 
 .header-icon i:hover {
@@ -141,17 +146,15 @@ nav.header-black {
 @media(max-width: 767px) {
 	.header {
 		background-color: #000;
-		height: ;
 		padding: 0;
-	}
-	
-	.nav-header {
-		flex-wrap: wrap;
 	}
 	
 	nav.header-black {
 		background-color: #000;
-		height: ;
+	}
+
+	.nav-header {
+		flex-wrap: wrap;
 	}
 
 	.menu-toggle {
@@ -160,32 +163,39 @@ nav.header-black {
 		margin: 10px 0;
 	}
 
-	.header .menu {
-		width: 100%;
-	}	
-
 	.menu {
-		display: none;
-		transition: all 1s ease-out;
+		display: block;
+		position: absolute;
+		margin-left: 0;
+		background-color: #000;
+		width: 100%;
+		height: 100vh;
+		top: 55px;
+		right: -100%;
+		transition: all 1s;
+	}
+	
+	.menu.show {
+		right: 0;
+		top: 55px;
+		transition: all 1s;
+	}
+	
+	.menu .menu-nav {
+		flex-direction: column;
 	}
 	
 	.menu ul li {
-	display: inline-block;
-		padding: 15px 10px;
+		padding: 25px 10px;
 	}
 
 	.header-icon {
-		display: none;
+		justify-content: center;
+		margin-left: 0;
 	}
 
-	.menu .menu-nav{
-		flex-direction: column;
-		margin-bottom: 10px;
-	}
-
-	.show{
-		display: block;
-		transition: all 1s ease-out;
+	.header-icon i {
+		line-height: 20px;
 	}
 }
 
@@ -1103,8 +1113,4 @@ nav.header-black {
 	.message p {
 		line-height: 15px;
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c98d7a85c114105098dc3d650bf4af052aa18c62
