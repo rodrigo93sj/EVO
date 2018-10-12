@@ -20,21 +20,26 @@ a:hover {
 
 .wrapper {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	position: relative;
 	background-image: url(../images/bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+	overflow: auto
 }
 
+@media (max-width: 767px) {
+	.wrapper {
+		background-image: none;
+		background-color: #fff;
+	}
+}
 /* ====== header ====== */
 .header {
 	background-color: rgba(0, 0, 0, 0.1);
 	padding: 17.5px 0;
-	top: 0;
-	left: 0;
 	width: 100%;
 	transition: all 0.6s ease-out;
 }
@@ -99,13 +104,6 @@ nav.header-black {
 	text-transform: uppercase;
 }
 
-.menu ul .active a,
-.menu ul .active a:focus,
-.menu ul .active a:hover {
-	color: #6ed18f;
-	text-transform: uppercase;
-}
-
 .menu ul li a:hover {
 	color: #6ed18f;
 }
@@ -113,7 +111,7 @@ nav.header-black {
 .menu-toggle .icon-bar {
 	background-color: #fff;
 	height: 3px;
-	width: 22px;
+	width: 25px;
 	display: block;
 }
 
@@ -142,6 +140,9 @@ nav.header-black {
 	.header {
 		background-color: #000;
 		padding: 0;
+		height: 55px;
+		display: flex;
+		align-items: center;
 	}
 	
 	nav.header-black {
@@ -153,35 +154,62 @@ nav.header-black {
 	}
 
 	.menu-toggle {
+		position: relative;
 		display: block;
 		cursor: pointer;
-		margin: 10px 0;
+		z-index: 1010;
+	}
+	
+	.menu-toggle span {
+		transition: all 0.5s;
+	}
+
+	.menu-toggle.times span:nth-child(2) {
+		background-color: transparent;
+	}
+	
+	.menu-toggle.times span:nth-child(1) {
+		transform: rotate(45deg);
+		transition: all 0.5s;
+		transform-origin: 10% 40%;
+	}
+
+	.menu-toggle.times span:nth-child(3) {
+		transform: rotate(-45deg);
+		transition: all 0.5s;
+		transform-origin: 10% 40%;
 	}
 
 	.menu {
 		display: block;
 		position: absolute;
 		margin-left: 0;
-		background-color: #000;
-		width: 100%;
+		background-color: #6ed18f;
+		width: 75%;
 		height: 100vh;
-		top: 55px;
+		top: 0px;
 		right: -100%;
-		transition: all 1s;
+		transition: all 0.6s;
 	}
 	
 	.menu.show {
 		right: 0;
-		top: 55px;
-		transition: all 1s;
+		top: 0px;
+		transition: all 0.6s;
 	}
 	
 	.menu .menu-nav {
 		flex-direction: column;
+		margin-top: 50px;
 	}
 	
 	.menu ul li {
 		padding: 25px 10px;
+	}
+	
+	.menu ul li a:hover,
+	.menu ul li a:focus {
+		color: #fff
 	}
 
 	.header-icon {
@@ -195,6 +223,13 @@ nav.header-black {
 }
 
 /* ====== section home ====== */
+.hero-image {
+	width: 100%;
+	background-image: url(../images/bg.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
 .wrap-home {
 	width: 100%;
 	display: flex;
@@ -1097,7 +1132,12 @@ nav.header-black {
 @media (max-width: 767px) {
 	.btn-whats {
 		left: 15px;
-		bottom: 70px;
+		bottom: 40px;
+	}
+
+	.btn-whats-floating {
+		width: 40px;
+		height: 40px;
 	}
 
 	#box-info {
