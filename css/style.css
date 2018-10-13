@@ -27,7 +27,7 @@ a:hover {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	overflow: auto
+	overflow: auto;
 }
 
 @media (max-width: 767px) {
@@ -91,7 +91,7 @@ nav.header-black {
 
 .menu ul li {
 	display: inline-block;
-	padding: 20px 10px;
+	margin: 20px 10px;
 }
 
 .menu ul li a{
@@ -169,12 +169,14 @@ nav.header-black {
 	}
 	
 	.menu-toggle.times span:nth-child(1) {
+		background-color: #6ed18f;
 		transform: rotate(45deg);
 		transition: all 0.5s;
 		transform-origin: 10% 40%;
 	}
 
 	.menu-toggle.times span:nth-child(3) {
+		background-color: #6ed18f;
 		transform: rotate(-45deg);
 		transition: all 0.5s;
 		transform-origin: 10% 40%;
@@ -184,7 +186,7 @@ nav.header-black {
 		display: block;
 		position: absolute;
 		margin-left: 0;
-		background-color: #6ed18f;
+		background-color: #fff;
 		width: 75%;
 		height: 100vh;
 		top: 0px;
@@ -204,21 +206,37 @@ nav.header-black {
 	}
 	
 	.menu ul li {
-		padding: 25px 10px;
+		margin: 25px 10px;
 	}
 	
+	.menu ul li a {
+		color: #333;
+		font-size: 1rem;
+		font-weight: 400;
+		font-style: italic;
+		letter-spacing: 1.9px;
+		border-bottom: 1px solid #6ed18f;
+	}
+
 	.menu ul li a:hover,
 	.menu ul li a:focus {
-		color: #fff
+		color: #333;
 	}
 
 	.header-icon {
 		justify-content: center;
+		margin-top: 20px;
 		margin-left: 0;
+		padding: 0;
 	}
 
 	.header-icon i {
+		color: #333;
 		line-height: 20px;
+	}
+
+	.header-icon i:hover {
+		color: #333;
 	}
 }
 
