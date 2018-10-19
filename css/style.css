@@ -4,9 +4,10 @@
 	box-sizing: border-box;
 }
 
-html {
+html, body {
 	/* scroll-behavior: smooth;
 	habilita a rolagem suave para a página inteira */
+	width: 100%;
 }
 
 a:hover {
@@ -14,6 +15,7 @@ a:hover {
 }
 
 .hero {
+	width: 100%;
 	position: relative;
 	background-color: transparent;
 }
@@ -27,7 +29,22 @@ a:hover {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	overflow: auto;
+	overflow: ;
+}
+
+.section-area {
+	padding: 60px 0;
+}
+
+.center-title {
+	font-family: "Arial", sans-serif;
+	font-size: 2.2rem;
+	font-weight: 500;
+	color: #6ed18f;
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 50px;
+	margin: 0;
 }
 
 @media (max-width: 767px) {
@@ -35,7 +52,22 @@ a:hover {
 		background-image: none;
 		background-color: #fff;
 	}
+
+	.center-title {
+		font-size: 2rem;
+	}
 }
+
+@media (max-width: 575px) {
+	.center-title {
+		font-size: 1.7rem;
+	}
+
+	.result-item p {
+		font-size: 1rem;
+	}
+}
+
 /* ====== header ====== */
 .header {
 	background-color: rgba(0, 0, 0, 0.1);
@@ -45,7 +77,7 @@ a:hover {
 }
 
 nav.header-black {
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgb(0, 0, 0);
 	padding: 0;
 	transition: all 0.6s ease-out;
 }
@@ -96,16 +128,13 @@ nav.header-black {
 
 .menu ul li a{
 	font-family: "Arial", sans-serif;
+	display: inline-block;
 	color: #fff;
 	text-decoration: none;
 	font-size: .9rem;
 	font-weight: 700;
-	line-height: 25px;
 	text-transform: uppercase;
-}
-
-.menu ul li a:hover {
-	color: #6ed18f;
+	cursor: pointer;
 }
 
 .menu-toggle .icon-bar {
@@ -134,6 +163,25 @@ nav.header-black {
 
 .header-icon i:hover {
 	color: #6ed18f;
+}
+
+@media (min-width: 768px) {
+	.menu ul li a:hover {
+		color: #6ed18f;
+	}
+
+	.menu ul li a:after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 3px;
+		background-color: #6ed18f;
+		transition: all .5s ease;
+	}
+
+	.menu ul li a:hover::after {
+		width: 100%;
+	}
 }
 
 @media(max-width: 767px) {
@@ -215,7 +263,7 @@ nav.header-black {
 		font-weight: 400;
 		font-style: italic;
 		letter-spacing: 1.9px;
-		border-bottom: 1px solid #6ed18f;
+		border-bottom: 2px solid #6ed18f;
 	}
 
 	.menu ul li a:hover,
@@ -241,13 +289,6 @@ nav.header-black {
 }
 
 /* ====== section home ====== */
-.hero-image {
-	width: 100%;
-	background-image: url(../images/bg.jpg);
-	background-size: cover;
-	background-position: center;
-}
-
 .wrap-home {
 	width: 100%;
 	display: flex;
@@ -289,6 +330,7 @@ nav.header-black {
 	text-transform: uppercase;
 	font-size: .9rem;
 	border-radius: 3px;
+	padding: 8px 14px;
 }
 
 .btns button:first-child {
@@ -322,6 +364,12 @@ nav.header-black {
 }
 
 @media(max-width: 767px) {
+	.hero-image {
+		background-image: url(../images/bg.jpg);
+		background-size: cover;
+		background-position: center;
+	}
+
 	.wrap-content {
 		padding: 0 25px;
 	}
@@ -532,12 +580,12 @@ nav.header-black {
 .wrap-result h2 {
 	font-family: "Arial", sans-serif;
 	font-size: 2.2rem;
-	font-weight: 700;
+	font-weight: 500;
 	color: #6ed18f;
 	text-align: center;
 	text-transform: uppercase;
-	padding-top: 70px;
 	padding-bottom: 50px;
+	margin: 0;
 }
 
 .content-result {
@@ -569,19 +617,7 @@ nav.header-black {
 	margin-top: 10px;
 }
 
-@media (max-width: 767px) {
-	.wrap-result h2 {
-		font-size: 2rem;
-	}
-}
-
 @media (max-width: 575px) {
-	.wrap-result h2 {
-		font-size: 1.7rem;
-		padding-top: 50px;
-		padding-bottom: 40px;
-	}
-
 	.result-item p {
 		font-size: 1rem;
 	}
@@ -590,17 +626,6 @@ nav.header-black {
 /* ====== section price ====== */
 .hero-wrap-plan {
 	background-color: rgba(0, 0, 0, .7);
-}
-
-.plan-title {
-	font-family: "Arial", sans-serif;
-	font-size: 2.2rem;
-	font-weight: 700;
-	color: #6ed18f;
-	text-transform: uppercase;
-	text-align: center;
-	padding-top: 70px;
-	padding-bottom: 50px;
 }
 
 .wrap-plan {
@@ -730,10 +755,6 @@ nav.header-black {
 		flex-direction: column;
 	}
 
-	.plan-title {
-		font-size: 2rem;
-	}
-
 	.box-plan {
 		max-width: 510px;
 		margin-bottom: 30px;
@@ -745,12 +766,6 @@ nav.header-black {
 }
 
 @media (max-width: 575px) {
-	.plan-title {
-		font-size: 1.7rem;
-		padding-top: 50px;
-		padding-bottom: 40px;
-	}
-
 	.box-value {
 		display: flex;
 		justify-content: center;
@@ -792,17 +807,6 @@ nav.header-black {
 .wrap-contact {
 	position: relative;
 	background-color: #282828;
-}
-
-.wrap-contact h1 {
-	font-family: "Arial", sans-serif;
-	font-size: 2.2rem;
-	font-weight: 700;
-	color: #6ed18f;
-	text-transform: uppercase;
-	text-align: center;
-	padding-top: 30px;
-	padding-bottom: 20px;
 }
 
 .box-contact {
@@ -920,12 +924,6 @@ nav.header-black {
 }
 
 @media (max-width: 575px) {
-	.wrap-contact h1 {
-		font-size: 1.7rem;
-		padding-top: 50px;
-		padding-bottom: 40px;
-	}
-
 	.box-contact {
 		flex-direction: column;
 	}
