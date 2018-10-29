@@ -8,7 +8,6 @@
 	<title>EVO3 - Programa de Treinamento Físico</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/aos.css">
-	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
@@ -39,7 +38,7 @@
 		</div>
 
 		<!-- section header -->
-	    <nav class="header fixed-top">
+	    <nav class="header fixed-top" data-aos="fade-down">
 	    	<div class="container">
 	    		<div class="nav-header">
 			        <a class="header-logo" href="#"><img src="images/evo3.png"></a>
@@ -56,9 +55,9 @@
 				    		<li><a class="scrollTo" href="#planos">Planos</a></li>
 				    		<li><a class="scrollTo" href="#contato">Contato</a></li>
 				    	</ul>
-				    	<a class="header-icon" href="#">
-				    		<i class="fab fa-instagram"></i>
-				    	</a>
+				    	<div class="header-icon">
+					    	<a href="#"><i class="fab fa-instagram"></i></a>
+				    	</div>
 			    	</div>
 					
 			    </div>
@@ -67,13 +66,13 @@
 	
 		<!-- section home -->
 		<div id="home"></div>
-	    <section class="hero hero-image">
+	    <section class="section-main">
 	    	<div class="container">
 	    		<div class="wrap-home">
 	    			<div class="wrap-content">
-		    			<h1 class="wow fadeInDown">3 passos para o seu objetivo</h1>
-		    			<p class="wow fadeInDown">Ian Galeno - Personal Online</p>
-		    			<div class="btns wow fadeInUp">
+		    			<h1 data-aos="fade-up" data-aos-delay="500">3 passos para o seu objetivo</h1>
+		    			<p data-aos="fade-up" data-aos-delay="600">Ian Galeno - Personal Online</p>
+		    			<div class="btns" data-aos="fade-up" data-aos-delay="700">
 		    				<a class="scrollTo" href="#servicos">
 			    				<button type="button" class="btn btn-outline-success">Ver Resultados</button>
 			    			</a>
@@ -81,6 +80,13 @@
 			    				<button type="button" class="btn btn-success">Adquira Aqui</button>
 			    			</a>
 		    			</div>
+		    			<div class="button-down">
+		    				<a class="scrollTo" href="#servicos">
+								<span></span>
+								<span></span>
+								<span></span>
+							</a>
+						</div>
 		    		</div>
 	    		</div>
 	    	</div>
@@ -88,17 +94,20 @@
 
 		<!-- section about  -->
 		<div id="sobre"></div>
-	    <section class="wrap-about">
-    		<div class="wrap-img-about">
-    			<img src="images/personal-evo3.jpg"> 
-    		</div>
-    		<div class="wrap-text-about">
-    			<div class="text-about wow fadeInUp">
-    				<h5>Quem sou eu</h5>
-    				<h2>Ian Galeno</h2>
-    				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-    				<p>standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-    			</div>
+	    <section class="wrap-about section-area" style="padding-bottom: 0px;">
+	    	<h1 class="center-title" data-aos="fade-up">Sobre</h2>
+	    	<div class="content-about">
+	    		<div class="wrap-img-about" data-aos="fade-right">
+	    			<img src="images/personal-evo3.jpg"> 
+	    		</div>
+	    		<div class="wrap-text-about"data-aos="fade-up">
+	    			<div class="text-about wow fadeInUp">
+	    				<h5>Quem sou eu</h5>
+	    				<h2>Ian Galeno</h2>
+	    				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+	    				<p>standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+	    			</div>
+	    		</div>
     		</div>
 	    </section> 
 
@@ -113,9 +122,8 @@
 	    <!-- section result -->
 	    <div id="servicos"></div>
 	    <section class="wrap-result section-area">
-	    	<div id="servicos"></div>
 	    	<div class="container">
-	    		<h1 class="center-title wow fadeInDown">Histórias de sucesso</h2>
+	    		<h1 class="center-title" data-aos="fade-up">Histórias Sucesso</h1>
 	    		<div class="content-result">
 	    			<div class="result-item"">
 	    				<img src="images/results/image-1.png">
@@ -143,11 +151,11 @@
 
 	    <!-- section price -->
 	    <div id="planos"></div>
-	    <section class="hero-wrap-plan section-area">
-	    	<div class="container">
-	    		<h1 class="center-title wow fadeInDown">Escolha seu plano</h1>
+	    <section class="section-price section-area">
+	    	<div class="container overlay">
+	    		<h1 class="center-title" data-aos="fade-up">Escolha seu plano</h1>
 	    		<div class="wrap-plan">
-	    			<div class="box-plan wow flipInY">
+	    			<div class="box-plan" data-aos="flip-left">
 	    				<div class="sub-box">
 		    				<h4>Start</h4>
 		    				<div class="box-value">
@@ -164,7 +172,7 @@
 		    				<p>21 dias de acompanhamento</p>
 	    				</div>
 	    			</div>
-	    			<div class="box-plan wow flipInY">
+	    			<div class="box-plan" data-aos="flip-left">
 	    				<div class="sub-box">
 		    				<h4>Total Burn</h4>
 		    				<div class="box-value-b">
@@ -189,18 +197,18 @@
 	    <div id="contato"></div>
 	    <section class="wrap-contact section-area">
 	    	<div class="container">
-	    		<h1 class="center-title wow fadeInDown">Contato</h1>
+	    		<h1 class="center-title" data-aos="fade-up">Contato</h1>
 	    		<div class="box-contact">
-	    			<div class="contact wow fadeInUp">
+	    			<div class="contact" data-aos="fade-up">
 	    				<h3>Ian Galeno</h3>
 	    				<h4>Personal trainer e coach</h4>
 	    				<p>Tel: (91) 99153-9394</p>
 	    				<p>iangalenopersonal@gmail.com</p>
 	    				<a href="#"><i class="fab fa-instagram"></i></a>
 	    			</div>
-	    			<div class="content-contact wow fadeInUp">
+	    			<div class="content-contact" data-aos="fade-up">
 	    				<h3>Atendimento via Whatsapp</h3>
-	    				<div class="contact-whatsapp">
+	    				<div class="contact-whatsapp" data-aos="fade-up">
 	    					<div class="header-whatsapp">
 	    						<i class="fab fa-whatsapp"></i>
 	    						<h4>WhatsApp</h4>
@@ -230,8 +238,12 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script src="js/config.js"></script>
-	<script src="js/wow.js"></script>
+	<script src="js/aos.js"></script>
 
-	<script> new WOW().init() </script>
+	<script> 
+		AOS.init({
+			duration: 1000
+		}) 
+	</script>
 </body>
 </html>
