@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
 *{
 	padding: 0;
 	margin: 0;
@@ -357,11 +359,11 @@ nav.header-black {
 	color: #fff;
 	text-transform: uppercase;
 	letter-spacing: .5px;
-	margin-bottom: 140px;
+	margin-bottom: 50px;
 }
 
 .btns {
-	margin-bottom: 40px;
+	margin-bottom: 10px;
 }
 
 .btns button {
@@ -401,48 +403,6 @@ nav.header-black {
 	background-color: #4cbc9f !important;
 	box-shadow: none !important;
 }
-
-.button-down {
-	position: relative;
-	width: 25px;
-	margin-left: 20px;
-}
-
-.button-down span {
-	display: block;
-	width: 20px;
-	height: 20px;
-	border-bottom: 3px solid #fff;
-	border-right: 3px solid #fff;
-	transform: rotate(45deg);
-	margin: -10px;
-	animation: animate 2s infinite;
-}
-
-/*
-.button-down span:nth-child(2) {
-	animation-delay: -0.2s;
-}
-
-.button-down span:nth-child(3) {
-	animation-delay: -0.4s;
-}
-
-@keyframes animate {
-	0% {
-		opacity: 0;
-		transform: rotate(45deg) translate(-20px, -20px);
-	}
-
-	50% {
-		opacity: 1;
-	}
-
-	100% {
-		opacity: 0;
-		transform: rotate(45deg) translate(20px, 20px);
-	}
-}*/
 
 @media(max-width: 767px) {
 	.hero-image {
@@ -699,6 +659,53 @@ nav.header-black {
 	margin-bottom: 30px
 }
 
+.result-box .box-inline {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	background-color: #20AC87;
+	width: 100%;
+	height: 5px;
+}
+
+.result-box .arrow-down {
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 0;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-top: 70px solid #20AC87;
+	z-index: 1;
+}
+
+.arrow-down .box-arrow {
+	font-family: 'Fjalla One', sans-serif;
+	position: absolute;
+	color: #fff;
+	top: -70px;
+	right: -32px;
+	text-align: center;
+}
+
+.box-arrow span:nth-child(1) {
+	font-size: 1.3rem;
+	font-weight: 400;
+	letter-spacing: .1rem;
+}
+
+.box-arrow span:nth-child(2) {
+	font-size: 1.3rem;
+	font-weight: 700;
+	top: 0;
+}
+
+.box-arrow span:nth-child(3) {
+	font-size: 1.1rem;
+	font-weight: 700;
+	top: 0;
+}
+
 .box-img {
 	display: flex;
 	position: relative;
@@ -736,7 +743,7 @@ nav.header-black {
 	margin-left: 35px;
 }
 
-.box-item span:nth-child(3) {
+.box-item span:nth-child(2) {
 	display: inline-block;
 	font-size: 1.1rem;
 	line-height: 50px;
@@ -1325,34 +1332,12 @@ nav.header-black {
 #box-info .arrow {
 	position: absolute;
 	width: 1rem;
-	height: .5rem;
+	height: 1rem;
 	display: block;
-	margin: 0 .2rem;
-}
-
-.arrow {
 	left: 23px;
-	bottom: calc((.5rem + 1px) * -1);
-}
-
-.arrow:before, 
-.arrow:after {
-	position: absolute;
-	display: block;
-	content: "";
-	border-style: solid;
-	border-color: transparent;
-	border-width: .5rem .5rem 0;
-}
-
-.arrow:before {
-	bottom: 0;
-    border-top-color: rgba(0, 0, 0, .25);
-}
-
-.arrow:after {
-	bottom: 1px;
-    border-top-color: #efe7dd;
+	bottom: -6px;
+	background-color: #efe7dd;
+	transform: rotate(45deg);
 }
 
 @media (max-width: 767px) {
